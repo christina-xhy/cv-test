@@ -9,7 +9,10 @@
 <body>
     <div id="html"></div>
     <style id="style"></style>
-    <div id="div1"></div>
+    <div id="div1Wrapper">
+        <div id="div1"></div>
+    </div>
+
     <style>
         #html{
             word-break: break-all;
@@ -33,13 +36,15 @@
         #html{
          height:50vh;
         }
-        #div1{
+        #div1Wrapper{
             height:50vh;
-            position:relative;
+            overflow:auto;
+        }
+        #div1 {
+            position:relativec;
             top:0;
             right:0;
-        }
-
+     }
     }
     </style>
     <div id="div2"></div>
