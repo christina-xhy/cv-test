@@ -1,4 +1,4 @@
-let html = document.querySelector('#demo')
+let html = document.querySelector('#html')
 let style = document.querySelector('#style')
 let string = `/*你好，我是christina
 * 接下来我演示一下我的前端技能
@@ -25,8 +25,8 @@ let string = `/*你好，我是christina
 /*
 接下来加两个神秘的图形 **/
 #div1::before{
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
     left:50%;
     top:0%;
     border-radius:50%;
@@ -37,8 +37,8 @@ let string = `/*你好，我是christina
     
 }
 #div1::after{
-    width:200px;
-    height:200px;
+    width:100px;
+    height:100px;
     left:50%;
     bottom:0%;
     border-radius:50%;
@@ -48,7 +48,6 @@ let string = `/*你好，我是christina
     background:radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(12,2,2,1) 24%, rgba(255,255,255,1) 24%);
 }
 `;
-
 let string2 = '';
 // string = string.replace(/\n/g,'<br>'),正则表达式替换所有空格换行
 //string = string.replace(/\n/g,'<br>'),弊端是会出现一个<.
@@ -64,7 +63,8 @@ let step = () => {
         }else {
         html.innerHTML = string2;
         style.innerHTML = string.substring(0,n);
-        window.scrollTo(0,99999);
+        window.scrollTo(0, 99999);
+        html.scrollTo(0, 99999);
           string2 += string[n];//如果不是，就照搬。
         }
         if(n <= string.length-1){
@@ -72,13 +72,9 @@ let step = () => {
         step();
         }
     },10);
-}
+};
 step();
-style.innerHTML = `
-body{
-color:red;
-}
-`;
+
 
 
 
